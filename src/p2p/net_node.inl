@@ -380,7 +380,8 @@ namespace nodetool
     }
     else
     {
-      full_addrs.insert("13.55.199.36:22022"); 
+      full_addrs.insert("142.93.203.41:33022"); 
+      full_addrs.insert("142.93.255.240:33022"); 
     }
     return full_addrs;
   }

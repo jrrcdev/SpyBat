@@ -89,7 +89,7 @@ typedef cryptonote::simple_wallet sw;
 
 #define DEFAULT_MIX 9
 
-#define OUTPUT_EXPORT_FILE_MAGIC "Loki output export\003"
+#define OUTPUT_EXPORT_FILE_MAGIC "spybat output export\003"
 
 #define LOCK_IDLE_SCOPE() \
   bool auto_refresh_enabled = m_auto_refresh_enabled.load(std::memory_order_relaxed); \
@@ -3295,7 +3295,7 @@ bool simple_wallet::new_wallet(const boost::program_options::variables_map& vm,
     "To start synchronizing with the daemon, use the \"refresh\" command.\n"
     "Use the \"help\" command to see the list of available commands.\n"
     "Use \"help <command>\" to see a command's documentation.\n"
-    "Always use the \"exit\" command when closing loki-wallet-cli to save \n"
+    "Always use the \"exit\" command when closing spybat-wallet-cli to save \n"
     "your current session's state. Otherwise, you might need to synchronize \n"
     "your wallet again (your wallet keys are NOT at risk in any case).\n")
   ;
@@ -7479,12 +7479,12 @@ int main(int argc, char* argv[])
   bool should_terminate = false;
   std::tie(vm, should_terminate) = wallet_args::main(
    argc, argv,
-   "loki-wallet-cli [--wallet-file=<file>|--generate-new-wallet=<file>] [<COMMAND>]",
-    sw::tr("This is the command line loki wallet. It needs to connect to a loki\ndaemon to work correctly."),
+   "spybat-wallet-cli [--wallet-file=<file>|--generate-new-wallet=<file>] [<COMMAND>]",
+    sw::tr("This is the command line spybat wallet. It needs to connect to a spybat\ndaemon to work correctly."),
     desc_params,
     positional_options,
     [](const std::string &s, bool emphasis){ tools::scoped_message_writer(emphasis ? epee::console_color_white : epee::console_color_default, true) << s; },
-    "loki-wallet-cli.log"
+    "spybat-wallet-cli.log"
   );
 
   if (!vm)

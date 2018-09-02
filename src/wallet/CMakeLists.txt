@@ -100,7 +100,7 @@ target_link_libraries(wallet_rpc_server
     ${EXTRA_LIBRARIES})
 set_property(TARGET wallet_rpc_server
   PROPERTY
-    OUTPUT_NAME "loki-wallet-rpc")
+    OUTPUT_NAME "spybat-wallet-rpc")
 install(TARGETS wallet_rpc_server DESTINATION bin)
 
 
